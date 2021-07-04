@@ -15287,26 +15287,18 @@ Wall time: 20.4 s
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For the optional challenge, my solution pipeline detects the curb like concrete structure as the lane. It might cause confusion.</p>
-<h3 id="Outlook:">Outlook:<a class="anchor-link" href="#Outlook:">&#182;</a></h3><ul>
-<li>Lanes at the curved roads cannot be approached by this approach. This is an area of improvement. </li>
+<h3 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:">&#182;</a></h3><p>The current pipeline works pretty well in the test images and test videos of almost straight roads. For the opional challenge problem, my solution pipeline detects the curb like concrete structure as the lane. It might cause confusion in the lane detection algorithm.</p>
+<h3 id="Shortcomings-and-possible-improvements:">Shortcomings and possible improvements:<a class="anchor-link" href="#Shortcomings-and-possible-improvements:">&#182;</a></h3><ul>
+<li>There I found, shakiness in the the lane while testing the on the videos as I simply applying the image pipeline for video also. An easy fix is to average the current frame lines with the previous frame lines, and if one of the lanes isn’t computed properly,you can substitute it with the prior working lane line.Also, in the next frame when a line is detected, it can again be averaged with the older working line.</li>
+<li>This solution pipeline is not a best option for detecting lanes at the curved roads. This is an area of improvement. A possible improvement would be to modify the above pipeline to detect curved lane line.</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-     </div>
 </div>
-</div>
-</div>
-
 </div>
 </body>
 

@@ -559,14 +559,16 @@ HTML("""
 
 
 
-For the optional challenge, my solution pipeline detects the curb like concrete structure as the lane. It might cause confusion.
- 
+### Conclusion:
 
-### Outlook:
-- Lanes at the curved roads cannot be approached by this approach. This is an area of improvement. 
+The current pipeline works pretty well in the test images and test videos of almost straight roads. For the opional challenge problem, my solution pipeline detects the curb like concrete structure as the lane. It might cause confusion in the lane detection algorithm. 
+
+### Shortcomings and possible improvements: 
+
+- There I found, shakiness in the the lane while testing the on the videos as I simply applying the image pipeline for video also. An easy fix is to average the current frame lines with the previous frame lines, and if one of the lanes isn’t computed properly,you can substitute it with the prior working lane line.Also, in the next frame when a line is detected, it can again be averaged with the older working line.
+- This solution pipeline is not a best option for detecting lanes at the curved roads. This is an area of improvement. A possible improvement would be to modify the above pipeline to detect curved lane line.
+
+
     
 
 
-```python
-
-```
